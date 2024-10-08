@@ -1,4 +1,4 @@
-package headfirst.designpatterns.factory.pizzaaf;
+package Group_assignment_1;
 
 public abstract class Pizza {
 	String name;
@@ -11,6 +11,8 @@ public abstract class Pizza {
 	Clams clam;
 
 	abstract void prepare();
+	abstract double cost();
+	public abstract String getDescribe();
 
 	void bake() {
 		System.out.println("Bake for 25 minutes at 350");

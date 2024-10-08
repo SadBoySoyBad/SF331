@@ -1,5 +1,10 @@
-package headfirst.designpatterns.factory.pizzaaf;
+package Group_assignment_1;
 
-public interface Clams {
-	public String toString();
+public abstract class Clams extends PizzaDecorator {
+	public Clams (Pizza pizza){
+		super(pizza);
+	}
+	public abstract String toString();
+	public abstract double cost();
+	public abstract String getDescribe();
 }

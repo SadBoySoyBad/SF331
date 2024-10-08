@@ -1,5 +1,4 @@
-package headfirst.designpatterns.factory.pizzaaf;
-
+package Group_assignment_1;
 public class PepperoniPizza extends Pizza {
 	PizzaIngredientFactory ingredientFactory;
  
@@ -7,6 +6,14 @@ public class PepperoniPizza extends Pizza {
 		this.ingredientFactory = ingredientFactory;
 	}
  
+	public double cost(){
+		return 100.0;
+	}
+
+	public String getDescribe(){
+		return "Pepperoni pizza \n";
+	}
+
 	void prepare() {
 		System.out.println("Preparing " + name);
 		dough = ingredientFactory.createDough();

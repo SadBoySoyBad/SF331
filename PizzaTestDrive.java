@@ -1,4 +1,4 @@
-package headfirst.designpatterns.factory.pizzaaf;
+package Group_assignment_1;
 
 public class PizzaTestDrive {
  
@@ -7,27 +7,71 @@ public class PizzaTestDrive {
 		PizzaStore chicagoStore = new ChicagoPizzaStore();
  
 		Pizza pizza = nyStore.orderPizza("cheese");
-		System.out.println("Ethan ordered a " + pizza + "\n");
+		pizza = new ReggianoCheese(pizza);
+		pizza = new MarinaraSauce(pizza);
+		pizza = new ThinCrustDough(pizza);
+		System.out.println("Ethan ordered a " + pizza.getDescribe() + "-----Total price is " + pizza.cost() + " baht.-----\n");
  
 		pizza = chicagoStore.orderPizza("cheese");
-		System.out.println("Joel ordered a " + pizza + "\n");
+		pizza = new ThickCrustDough(pizza);
+		pizza = new PlumTomatoSauce(pizza);
+		pizza = new MozzarellaCheese(pizza);
+		System.out.println("Joel ordered a " + pizza.getDescribe() + "-----Total price is " + pizza.cost() + " baht.-----\n");
 
 		pizza = nyStore.orderPizza("clam");
-		System.out.println("Ethan ordered a " + pizza + "\n");
+		pizza = new ThinCrustDough(pizza);
+		pizza = new MarinaraSauce(pizza);
+		pizza = new ReggianoCheese(pizza);
+		pizza = new SlicedPepperoni(pizza);
+		pizza = new FreshClams(pizza);
+		System.out.println("Ethan ordered a " + pizza.getDescribe() + "-----Total price is " + pizza.cost() + " baht.-----\n");
  
 		pizza = chicagoStore.orderPizza("clam");
-		System.out.println("Joel ordered a " + pizza + "\n");
+		pizza = new PlumTomatoSauce(pizza);
+		pizza = new MozzarellaCheese(pizza);
+		pizza = new FrozenClams(pizza);
+		pizza = new ThickCrustDough(pizza);
+		System.out.println("Joel ordered a " + pizza.getDescribe() + "-----Total price is " + pizza.cost() + " baht.-----\n");
 
 		pizza = nyStore.orderPizza("pepperoni");
-		System.out.println("Ethan ordered a " + pizza + "\n");
+		pizza = new ThinCrustDough(pizza);
+		pizza = new MarinaraSauce(pizza);
+		pizza = new ReggianoCheese(pizza);
+		pizza = new Garlic(pizza);
+		pizza = new Onion(pizza);
+		pizza = new Mushroom(pizza);
+		pizza = new RedPepper(pizza);
+		pizza = new SlicedPepperoni(pizza);
+		System.out.println("Ethan ordered a " + pizza.getDescribe() + "-----Total price is " + pizza.cost() + " baht.-----\n");
  
 		pizza = chicagoStore.orderPizza("pepperoni");
-		System.out.println("Joel ordered a " + pizza + "\n");
+		pizza = new ThickCrustDough(pizza);
+		pizza = new PlumTomatoSauce(pizza);
+		pizza = new MozzarellaCheese(pizza);
+		pizza = new BlackOlives(pizza);
+		pizza = new Spinach(pizza);
+		pizza = new Eggplant(pizza);
+		pizza = new SlicedPepperoni(pizza);
+		System.out.println("Joel ordered a " + pizza.getDescribe() + "-----Total price is " + pizza.cost() + " baht.-----\n");
 
 		pizza = nyStore.orderPizza("veggie");
-		System.out.println("Ethan ordered a " + pizza + "\n");
+		pizza = new ThinCrustDough(pizza);
+		pizza = new MarinaraSauce(pizza);
+		pizza = new ReggianoCheese(pizza);
+		pizza = new Garlic(pizza);
+		pizza = new Onion(pizza);
+		pizza = new Mushroom(pizza);
+		pizza = new RedPepper(pizza);
+		System.out.println("Ethan ordered a " + pizza.getDescribe() + "-----Total price is " + pizza.cost() + " baht.-----\n");
  
 		pizza = chicagoStore.orderPizza("veggie");
-		System.out.println("Joel ordered a " + pizza + "\n");
+		pizza = new ThickCrustDough(pizza);
+		pizza = new PlumTomatoSauce(pizza);
+		pizza = new MozzarellaCheese(pizza);
+		pizza = new BlackOlives(pizza);
+		pizza = new Spinach(pizza);
+		pizza = new Eggplant(pizza);
+		System.out.println("Joel ordered a " + pizza.getDescribe() + "-----Total price is " + pizza.cost() + " baht.-----\n");
+
 	}
 }
